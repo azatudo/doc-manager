@@ -1,3 +1,5 @@
+"use client";
+
 import React from "react";
 import {
   Table,
@@ -39,7 +41,7 @@ export default function DocumentTable({ items, onOpen }: Props) {
               </TableCell>
               <TableCell>{it.version}</TableCell>
               <TableCell>{it.size_kb} KB</TableCell>
-              <TableCell>{new Date(it.uploaded_at).toLocaleString()}</TableCell>
+              <TableCell>{new Date(it.uploaded_at).toLocaleString("en-GB")}</TableCell>
               <TableCell align="center">
                 <IconButton onClick={() => onOpen(it)} aria-label="details">
                   <InfoIcon />
